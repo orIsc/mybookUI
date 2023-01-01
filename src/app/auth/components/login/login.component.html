@@ -1,0 +1,26 @@
+<div class="align-items-center flex justify-content-center h-full">
+    <p-card styleClass="login">
+      <div class="text-center mb-5">
+        <div class="mb-3">
+          <!-- <img src="/assets/logo.png" alt="KOIS" style="max-width: 150px"> -->
+        </div>
+      </div>
+  
+      <div>
+        <form [formGroup]="formGroup" (ngSubmit)="submit()">
+          <label for="username" class="block text-900 font-medium mb-2">Username</label>
+          <input formControlName="userName" id="userName" type="text" pInputText class="w-full mb-3">
+  
+          <label for="password" class="block text-900 font-medium mb-2">Password</label>
+          <input formControlName="password" id="password" type="password" pInputText class="w-full mb-3">
+  
+          <div class="flex align-items-center justify-content-between mb-6">
+            <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a>
+          </div>
+  
+          <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full" [disabled]="!formGroup.valid"></button>
+        </form>
+      </div>
+    </p-card>
+  </div>
+  
