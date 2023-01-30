@@ -13,10 +13,12 @@ import {ToastModule} from "primeng/toast";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MessageService } from 'primeng/api';
 import { HttpConfigInterceptor } from './interceptors/http-config-interceptor.service';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { HttpConfigInterceptor } from './interceptors/http-config-interceptor.se
     BrowserAnimationsModule,
     HttpClientModule,
     HomeModule,
+    SharedModule,
     AuthModule,
     ToastModule,
 		NgxsModule.forRoot([AuthState], {developmentMode: !environment.production}),

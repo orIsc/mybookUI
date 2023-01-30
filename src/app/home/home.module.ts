@@ -1,6 +1,8 @@
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home.component'; 
+import { RouterModule } from '@angular/router';
+import { homeRoutes } from './home.routes';
 
 
 @NgModule({
@@ -8,7 +10,8 @@ import { HomeComponent } from './components/home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(homeRoutes),
   ]
 })
 export class HomeModule { }

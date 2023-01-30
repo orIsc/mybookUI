@@ -1,6 +1,6 @@
 <div id="app">
-	<!-- <app-header *ngIf="isAuthenticated$ | async" (toggleSidebar)="toggleSidebar($event)"></app-header>
-	<p-sidebar *ngIf="isAuthenticated$ | async" [(visible)]="showSidebar">
+	<app-header *ngIf="isAuthenticated$ | async"></app-header>
+	<!-- <p-sidebar *ngIf="isAuthenticated$ | async" [(visible)]="showSidebar">
 		Content
 	</p-sidebar> -->
 	<div id="content" [class.logged-out]="(isAuthenticated$ | async) === undefined">
