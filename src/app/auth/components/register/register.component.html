@@ -1,5 +1,5 @@
 <div class="align-items-center flex justify-content-center h-full">
-    <p-card styleClass="login">
+    <p-card styleClass="Register User">
     
       <div class="text-center mb-5">
         <h1>Log In</h1>
@@ -9,7 +9,7 @@
       </div>
   
       <div>
-        <form [formGroup]="formGroup" (ngSubmit)="submit()">
+        <form [formGroup]="form" (ngSubmit)="submit()">
           <label for="username" class="block text-900 font-medium mb-2">Username</label>
           <input formControlName="userName" id="userName" type="text" pInputText class="w-full mb-3">
   
@@ -24,7 +24,7 @@
               <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer" [routerLink]="['/auth/register']">Sign Up</a>
             </div>
           </div>
-            <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full" [disabled]="!formGroup.valid"></button>
+            <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full" [disabled]="!form.valid"></button>
         </form>
       </div>
     </p-card>

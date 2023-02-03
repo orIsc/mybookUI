@@ -9,6 +9,7 @@ import {InputTextModule} from "primeng/inputtext";
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
+import { RegisterComponent } from './components/register/register.component';
 
 export const ROUTES: Routes = [
 	{
@@ -17,12 +18,19 @@ export const ROUTES: Routes = [
 			{path: '', pathMatch: 'full', redirectTo: 'login'},
 			{path: 'login', component: LoginComponent},
 		]
+	},
+	{
+		path: 'auth',
+		children: [
+			{path: '', pathMatch: 'full', redirectTo: 'register'},
+			{path: 'register', component: RegisterComponent},
+		]
 	}
 ]
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     	CommonModule,
 		InputTextModule,
