@@ -1,15 +1,14 @@
 import { Role } from "./role.enum";
 
 export interface User {
-    id: string;
-    firstName?: string;
-    lastName?: string;
-    userName?: string;
-    role?: Role;
-    email?: string;
-    phone?: string;
-    token?: string | null;
-    birthdate?: string;
-    profilePicture?: string | null;
-    
+  id: string;
+  userName?: string;
+  firstName?: string;
+  lastName?: string;
+  password?: string;
+  email?: string;
+  birthdate?: string;
+  profilePicture?: string;
+  role?: Role;
+  token?: string | null;
 }

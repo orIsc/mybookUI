@@ -1,3 +1,4 @@
+import { UsersState } from './state/store/users.state';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -29,7 +30,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     AuthModule,
     ToastModule,
-		NgxsModule.forRoot([AuthState], {developmentMode: !environment.production}),
+		NgxsModule.forRoot([AuthState, UsersState], {developmentMode: !environment.production}),
 		NgxsReduxDevtoolsPluginModule.forRoot(),
   ],
   providers: [
