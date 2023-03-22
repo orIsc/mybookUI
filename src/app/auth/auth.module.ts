@@ -39,7 +39,7 @@ export const ROUTES: Routes = [
 		CardModule,
 		ButtonModule,
 		NgxsStoragePluginModule.forRoot({
-			key: ['auth.token', 'auth.username', 'auth.role'],
+			key: ['auth.token', 'auth.userName', 'auth.role'],
 		}),
 		RippleModule,
   ]

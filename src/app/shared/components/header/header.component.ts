@@ -1,5 +1,5 @@
 import { Store } from '@ngxs/store';
-import { Logout } from './../../state/actions/auth.actions';
+import { Logout } from '../../../state/actions/auth.actions';
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
