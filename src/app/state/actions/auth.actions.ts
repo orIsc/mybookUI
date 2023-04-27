@@ -2,13 +2,13 @@ import {Role} from "../../auth/models/role.enum";
 
 export interface AuthStateModel {
   token: string | null;
-  userName: string | null;
+  email: string | null;
   role: Role | null;
 }
 
 export class Login {
   static readonly type = '[Auth] Login';
-  constructor(public payload: { userName: string; password: string }) {}
+  constructor(public payload: { email: string; password: string }) {}
 }
 
 export class Logout {

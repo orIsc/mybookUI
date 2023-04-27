@@ -10,6 +10,7 @@ import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import { RegisterComponent } from './components/register/register.component';
+import { CalendarModule } from 'primeng/calendar';
 
 export const ROUTES: Routes = [
 	{
@@ -37,6 +38,7 @@ export const ROUTES: Routes = [
 		RouterModule.forChild(ROUTES),
 		ReactiveFormsModule,
 		CardModule,
+		CalendarModule,
 		ButtonModule,
 		NgxsStoragePluginModule.forRoot({
 			key: ['auth.token', 'auth.userName', 'auth.role'],

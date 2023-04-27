@@ -10,7 +10,7 @@ import { AuthStateModel, Login, Logout } from "../actions/auth.actions";
 	name: 'auth',
 	defaults: {
 		token: null,
-		userName: null,
+		email: null,
 		role: null,
 	}
 })
@@ -22,8 +22,8 @@ export class AuthState {
 	}
 
 	@Selector()
-	static userName(state: AuthStateModel): string | null {
-		return state.userName;
+	static email(state: AuthStateModel): string | null {
+		return state.email;
 	}
 
 	@Selector()
@@ -47,7 +47,7 @@ export class AuthState {
 			tap((result) => {
 				ctx.patchState({
 					token: result.token,
-					userName: result.userName,
+					email: result.email,
 					role: result.role,
 				});
 				this.zone.run(() => this.router.navigate(['/home']));
@@ -66,7 +66,7 @@ export class AuthState {
 			tap(() => {
 				ctx.setState({
 					token: null,
-					userName: null,
+					email: null,
 					role: null,
 				});
 				this.zone.run(() => this.router.navigate(['/auth/login']));

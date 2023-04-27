@@ -14,8 +14,8 @@ export class AuthService {
     private http$: HttpClient) {
   }
 
-  public login({userName, password}: { userName: string, password: string }) {
-    return this.http$.post<User>(`${environment.apiUrl}user/login`, {userName, password});
+  public login({email, password}: { email: string, password: string }) {
+    return this.http$.post<User>(`${environment.apiUrl}user/login`, {email, password});
   }
 
   public logout(token: string | null) {

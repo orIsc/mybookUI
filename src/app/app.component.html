@@ -5,11 +5,11 @@
 	</p-sidebar> -->
 	<div id="content" [class.logged-out]="(isAuthenticated$ | async) === undefined">
 		<div class="grid h-full">
-			<div class="col-10">
+			<div class="col">
 				<router-outlet></router-outlet>
 			</div>
-			<div class="col-2">
-				<app-chat *ngIf="isAuthenticated$ | async"></app-chat>
+			<div *ngIf="isAuthenticated$ | async" class="col-2">
+				<app-chat></app-chat>
 			</div>
 		</div>
 	</div>
